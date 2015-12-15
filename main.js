@@ -3,11 +3,12 @@ define(function (require, exports, module) {
 
 	//# Import libs
 	var AppInit					= app.getModule("utils/AppInit");
-    var Commands            	= app.getModule("command/Commands");
     var CommandManager      	= app.getModule("command/CommandManager");
     var MenuManager        		= app.getModule("menu/MenuManager");
-
-    var TeamworkPreferences     = require("changemanagementPreferences");
+    
+    app.getModule("command/Commands");
+    
+    require("changemanagementPreferences");
 
     //# Define Commands
     var CMD_CHANGEMANAGEMENT         		= 'changemanagement';
@@ -25,9 +26,7 @@ define(function (require, exports, module) {
 
 
     var menu;
-    var menuItem;
     menu = MenuManager.addMenu(CMD_CHANGEMANAGEMENT);
-    //menuItem = menu.addMenuItem(CMD_TEAMWORK);
     menu.addMenuItem(CMD_CHANGEMANAGEMENT_CREATE_VERSION);
     menu.addMenuDivider();
     menu.addMenuItem(CMD_CHANGEMANAGEMENT_SELECT_VERSION);

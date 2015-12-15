@@ -10,7 +10,7 @@ define(function (require, exports, module) {
 	        text: "Allow CRs",
 	        description: "Is it allowed to create a new Model for a ChangeRequest",
 	        type: "Check",
-	        default: true
+	        'default': true
 	    }
 	};
 
